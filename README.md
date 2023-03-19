@@ -117,7 +117,7 @@ Below, you will see a skeleton and initial suggestions of what the Op resource s
 ```
 
 ### **POST /ops**
->TODO: Create an endpoint to create an op.
+>TODO: Create an endpoint to create an op. DONE
 
 ```BASH
 curl --request POST 'http://localhost:3000/ops' \
