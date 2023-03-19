@@ -13,6 +13,7 @@ const getOperator = async ( operatorId ) => {
     return operator;
 };
 
+
 const createOperator = async ( { firstName, lastName } ) => {
     const text = `
         INSERT INTO operators
@@ -22,7 +23,23 @@ const createOperator = async ( { firstName, lastName } ) => {
     await query( text, [ firstName, lastName ] );
 };
 
+const getSchedules = async (operatorId) => {
+    const text = `
+        SELECT 
+        o.businessName, o.opTitle, o.pay,
+        o.startTime, o.endTime, b.addressLine1,
+        b.addressLine2, b.city, b.state, b.zip
+        FROM opportunities as o
+        INNER JOIN businesses as b
+        ON o.businessName == b.businessName
+        WHERE o.operatorId == $operatorId
+    `;
+    const schedule  = await query( text, [ operatorId ] );
+    return schedule;
+}
+
 module.exports = {
-    getOperator
-    , createOperator
+    getOperator,
+    createOperator,
+    getSchedules
 }

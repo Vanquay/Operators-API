@@ -100,7 +100,7 @@ Below, you will see a skeleton and initial suggestions of what the Op resource s
 
 >TODO: Define and create this collection. DONE
 
->TODO: Create seeding for the corresponding database table in the `db/seed.js` file.
+>TODO: Create seeding for the corresponding database table in the `db/seed.js` file. DONE
 
 ```JSON
 {

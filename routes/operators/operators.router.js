@@ -1,6 +1,6 @@
 const express = require('express');
 const { getLastInsertId } = require('../../db');
-const { getOperator, createOperator } = require('./operators.service');
+const { getOperator, createOperator, getSchedules } = require('./operators.service');
 
 const operatorsRouter = express.Router();
 
@@ -32,6 +32,13 @@ operatorsRouter
                 .json( createdOperator )
         }
     );
+
+operatorsRouter.get('/:operatorId/schedules', async(req, res) => {
+    const operatorId = req.params.operatorId;
+    const schedule = await getSchedules( operatorId );
+
+    return res.status(200).json(schedule);
+})
 
 module.exports = {
     operatorsRouter

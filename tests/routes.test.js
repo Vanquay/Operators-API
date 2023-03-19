@@ -8,7 +8,7 @@ const businessStub = {
   "addressLine2": "Suite 32",
   "city": "Dallas",
   "state": "TX",
-  "zipcode": "75051"
+  "zip": "75051"
 }
 
 describe('Test business routes', () => {
@@ -47,5 +47,5 @@ describe('Test opportunities routes', () => {
 })
 
 describe('Test Schedules routes', () => {
-  
+
 })

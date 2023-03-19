@@ -9,6 +9,7 @@ businessesRouter.post(
     body('industry').notEmpty(),
     body('businessName').notEmpty(),
     body('addressLine1').notEmpty(),
+    body('city').notEmpty(),
     body('state').isLength({max:2}),
     body('zip').isLength({max:5}),
     async (req, res) => {
