@@ -25,7 +25,7 @@ const createBusinesses = async () => {
                 "addressLine2" TEXT,
                 "city" TEXT NOT NULL,
                 "state" TEXT NOT NULL,
-                "zipcode" TEXT NOT NULL, 
+                "zip" TEXT NOT NULL, 
                 "createdAt" DATE DEFAULT CURRENT_TIMESTAMP
             );
         `

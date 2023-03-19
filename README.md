@@ -78,7 +78,7 @@ We expect this resource to have an identifier as suggested below. We also expect
     "addressLine2": "Suite 32",
     "city": "Dallas",
     "state": "TX",
-    "zipcode": "75051"
+    "zip": "75051"
 }
 ```
 

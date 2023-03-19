@@ -10,7 +10,7 @@ businessesRouter.post(
     body('businessName').notEmpty(),
     body('addressLine1').notEmpty(),
     body('state').isLength({max:2}),
-    body('zipcode').isLength({max:5}),
+    body('zip').isLength({max:5}),
     async (req, res) => {
         const errors = validationResult(req);
         if(!errors.isEmpty()){
