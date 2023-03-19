@@ -6,6 +6,9 @@ const businessesRouter = express.Router();
 
 businessesRouter.post(
     '/',
+    body('industry').notEmpty(),
+    body('businessName').notEmpty(),
+    body('addressLine1').notEmpty(),
     body('state').isLength({max:2}),
     body('zipcode').isLength({max:5}),
     async (req, res) => {
@@ -14,7 +17,7 @@ businessesRouter.post(
             return res.status(400).json({errors: errors.array()})
         }
         await createBusiness(req.body);
-        res.status(201).json(req.body);
+        return res.status(201).json(req.body);
 });
 
 module.exports = {
