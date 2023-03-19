@@ -65,19 +65,25 @@ Veryable defines a business as an entity that creates job opportunities for oper
 
 We expect this resource to have an identifier as suggested below. We also expect this resource to have useful and relevant business attributes. Reference the [schedule](#Schedules) portion for information that could potentially be useful for an operator who wants to see their upcoming work.
 
->TODO: Define and create this collection.
+>TODO: Business collection. DONE
 
->TODO: Create seeding for the corresponding database table in the `db/seed.js` file.
+>TODO: Create seeding for the corresponding database table in the `db/seed.js` file. DONE
 
-```JSON
+``` JSON
 {
-    "id": 14
-    ...
+    "id": 0,
+    "businessName" : "Tesla",
+    "industry": "Automobile",
+    "addressLine1": "124 Prairie st",
+    "addressLine2": "Suite 32",
+    "city": "Dallas",
+    "state": "TX",
+    "zipcode": "75051"
 }
 ```
 
 ### **POST /businesses**
->TODO: Create an endpoint to create a business.
+>TODO: Create an endpoint to create a business. DONE
 
 ```BASH
 curl --request POST 'http://localhost:3000/businesses' \
@@ -92,16 +98,21 @@ Opportunities or Ops for short are jobs created by businesses and performed by o
 
 Below, you will see a skeleton and initial suggestions of what the Op resource should look like. Like the businesses collection, feel free to reference the [schedule](#Schedules) portion to help determine the appropriate attributes of this resource.
 
->TODO: Define and create this collection.
+>TODO: Define and create this collection. DONE
 
 >TODO: Create seeding for the corresponding database table in the `db/seed.js` file.
 
 ```JSON
 {
-    "id": 14
-    , "operatorId": 60
-    , "businessId": 14
-    ...
+    "id": 14,
+    "operatorId": 60,
+    "businessId": 14,
+    "businessName": "Tesla",
+    "opTitle": "Changing tyres",
+    "opDescription" : "Operators will be tasked with replacing model 3 tyres...",
+    "pay": 100.00,
+    "startTime": "2021-10-22 10:00:00",
+    "endTime": "2021-10-22 15:55:00"
 }
 ```
 
