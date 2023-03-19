@@ -3,7 +3,7 @@ const { seed } = require('./db');
 const { operatorsRouter } = require('./routes');
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

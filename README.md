@@ -6,6 +6,11 @@ Run `npm install` to install dependencies.
 ## Running Local Server
 Run `node app.js` to run the local server. Note that you will have to kill the server and run it again after making code level changes.
 
+## Run Local server with Docker
+Build the image with `docker build . -t <image-name>`
+Run the image with `docker run -p 3000:8080 -d <image-name>`
+
+
 ## Understand SQlite Use
 To reduce the complexity of this project, we have implemented the use of SQlite. SQlite fits really well here because it removes the complexity of client server as it simply becomes embedded in the program. 
 
