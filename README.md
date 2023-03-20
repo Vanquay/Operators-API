@@ -87,8 +87,14 @@ We expect this resource to have an identifier as suggested below. We also expect
 curl --request POST 'http://localhost:3000/businesses' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-        ...
-    }'
+  "businessName" : "Tesla",
+  "industry": "Automobile",
+  "addressLine1": "124 Prairie st",
+  "addressLine2": "Suite 32",
+  "city": "Dallas",
+  "state": "TX",
+  "zip": "75051"
+}'
 ```
 
 ## Ops
@@ -121,9 +127,15 @@ Below, you will see a skeleton and initial suggestions of what the Op resource s
 curl --request POST 'http://localhost:3000/ops' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-        "operatorId": 60
-        , "businessId": 14
-    }'
+  "operatorId": 60,
+  "businessId": 1,
+  "businessName": "Tesla",
+  "opTitle": "Changing tyres",
+  "opDescription": "Operators will be tasked with replacing model 3 tyres...",
+  "pay": 100,
+  "startTime": "2021-10-22 10:00:00",
+  "endTime": "2021-10-22 15:55:00"
+}'
 ```
 
 ## Schedules
